@@ -86,6 +86,17 @@ DVWA is a deliberately insecure PHP/MySQL web application. It is perfect for pra
 - brute force
 - CSRF attacks
 
+### 3.2 Deploy MySQL 5.7 With Weak Credentials
+
+<img width="605" height="223" alt="image" src="https://github.com/user-attachments/assets/691929d7-b7db-4ac7-8876-b9e9a8b133d0" />
+
+
+MySQL is commonly found in real environments and provides an excellent opportunity to practice database enumeration, user/privilege discovery, service recognition from port scanning, and weak credential testing.
+
+
+
+
+
 
 
 
