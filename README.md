@@ -15,17 +15,17 @@ By the end of this setup, the Windows VM will expose:
 
 ### Prerequisites 
 
-1.1 Host System
+Host System
 
 - VMware Workstation installed on your main system
 - CPU virtualization enabled in BIOS (Intel VT-x or AMD-V)
 
-1.2 Windows VM
+Windows VM
 
 - Windows 10 installed as a guest OS
 - VM must have nested virtualization enabled
 
-1.3 Enabling Nested Virtualization in VMware
+Enabling Nested Virtualization in VMware
 
 - This step allows Docker to run inside the Windows VM.
 - Shut down the Windows VM completely
@@ -36,7 +36,7 @@ In VMware Workstation:
 - “Virtualize Intel VT-x/EPT or AMD-V/RVI”
 - Power the VM back on
 
-1.4 Verify Virtualization Inside the Windows VM
+Verify Virtualization Inside the Windows VM
 
 - Open Task Manager → Performance → CPU
 - Look for:
@@ -45,8 +45,48 @@ In VMware Workstation:
 This confirms the VM supports running Docker.
 
 
+### Steps 
 
-## Steps
+1. Install WSL2 (Windows Subsystem for Linux)
+
+### <img width="721" height="173" alt="image" src="https://github.com/user-attachments/assets/c06f0870-53cd-4a6f-8a75-47c7a84cf058" />
+
+Docker Desktop on Windows relies on WSL2 as the backend that actually runs containers. Without WSL2, Docker cannot start its engine, and containerized services won’t run. Enabling WSL2 ensures the VM has the Linux-compatible layer Docker needs -- ultimately, prepareing the windows VM for Docker, installs, the virtualiztion layer used by the Docker Engine, and ensures compatbility, with Linux based vulnerable images. 
+
+2. Install Docker Desktop
+
+Go to https://www.docker.com/products/docker-desktop/ inside of your windows VM. 
+
+During installation allow for this setting:
+
+- USE WSL2 Backend = Yes 
+
+Docker Desktop is the tool that manages containers, pulls vulnerable images, exposes ports, and runs pre-built applications. It provides the interface and Docker Engine needed to run multiple vulnerable services simultaneously inside of our Windows machine.
+
+Reboot as instructed. 
+
+3. Deploying Vulnerable Services Using Docker
+
+The goal of this section is to transform the Windows VM into a realistic multi-service target by running vulnerable applications inside Docker containers. These applications expose additional ports (8080, 3306, optionally 3000) that you can later discover using Nmap and enumerate from Kali.
+Everything we run here is pre-built, intentionally vulnerable, and safe for lab use.
+
+
+3.1 Deploy DVWA (Damn Vulnerable Web App)
+
+### <img width="597" height="198" alt="image" src="https://github.com/user-attachments/assets/8e6d8096-51b6-4734-a40a-36dc8c8fbe7e" />
+
+DVWA is a deliberately insecure PHP/MySQL web application. It is perfect for practicing:
+
+- web reconnaissance
+- forced browsing
+- authentication testing
+- file uploads
+- SQL injection
+- XSS
+- brute force
+- CSRF attacks
+
+
 
 
 
