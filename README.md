@@ -92,6 +92,8 @@ DVWA is a deliberately insecure PHP/MySQL web application. It is perfect for pra
 
 This runs MySQL on port 3306 and then verifies it is running. MySQL is commonly found in real environments and provides an excellent opportunity to practice database enumeration, user/privilege discovery, service recognition from port scanning, and weak credential testing.
 
+### Deploy 
+
 
 
 
