@@ -17,37 +17,32 @@ By the end of this setup, the Windows VM will expose:
 
 1.1 Host System
 
-VMware Workstation installed on your main system
-
-CPU virtualization enabled in BIOS (Intel VT-x or AMD-V)
+- VMware Workstation installed on your main system
+- CPU virtualization enabled in BIOS (Intel VT-x or AMD-V)
 
 1.2 Windows VM
 
-Windows 10 installed as a guest OS
-
-VM must have nested virtualization enabled
+- Windows 10 installed as a guest OS
+- VM must have nested virtualization enabled
 
 1.3 Enabling Nested Virtualization in VMware
 
-This step allows Docker to run inside the Windows VM.
-
-Shut down the Windows VM completely
+- This step allows Docker to run inside the Windows VM.
+- Shut down the Windows VM completely
 
 In VMware Workstation:
-VM → Settings → Processors → Check:
-“Virtualize Intel VT-x/EPT or AMD-V/RVI”
 
-Power the VM back on
+- VM → Settings → Processors → Check:
+- “Virtualize Intel VT-x/EPT or AMD-V/RVI”
+- Power the VM back on
 
 1.4 Verify Virtualization Inside the Windows VM
 
-Open Task Manager → Performance → CPU
-Look for:
-Virtualization: Enabled
+- Open Task Manager → Performance → CPU
+- Look for:
+- Virtualization: Enabled
 
 This confirms the VM supports running Docker.
-
-
 
 
 
