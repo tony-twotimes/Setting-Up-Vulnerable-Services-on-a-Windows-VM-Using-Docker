@@ -100,9 +100,13 @@ docker pull vulnerables/web-dvwa
 This retrieves the official DVWA image from Docker Hub.
 DVWA is pre-configured, pre-built, and intentionally insecure — meaning no manual setup, web stack installation, or database configuration is required.
 
-### Run DVWA and Expose It Externally
+### 3.4  Run DVWA and Expose It Externally
 
 ### <img width="612" height="27" alt="image" src="https://github.com/user-attachments/assets/8a133c65-000e-459c-a2d2-c5bd948de7d8" />
+
+### 3.5 Verify Docker Services are Running 
+
+<img width="1072" height="96" alt="image" src="https://github.com/user-attachments/assets/aa2a94dd-d0d8-4f9e-8a34-fd3bb901e9e1" />
 
 
 
