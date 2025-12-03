@@ -108,6 +108,22 @@ DVWA is pre-configured, pre-built, and intentionally insecure — meaning no man
 
 <img width="1072" height="96" alt="image" src="https://github.com/user-attachments/assets/aa2a94dd-d0d8-4f9e-8a34-fd3bb901e9e1" />
 
+### 3.6 Verify DVWA and MySQL 5.7 from Kali Using Nmap 
+
+### <img width="760" height="245" alt="image" src="https://github.com/user-attachments/assets/69c2b507-b2e8-4e68-81e1-92b88038c80a" />
+
+### Conclusion
+
+By the end of this lab, I successfully transformed a standard Windows 10 virtual machine into a multi-service vulnerable host by deploying containerized applications using Docker. Enabling nested virtualization, installing Docker Desktop, and running pre-built vulnerable images gave the Windows VM several new attack surfaces, including:
+
+MySQL 5.7 exposed on port 3306
+
+DVWA exposed on a non-standard web port (e.g., 8888)
+
+Using Nmap from my Kali machine, I confirmed that both services were active, discoverable, and returning accurate version information. This validated that routing, Docker port mappings, and Windows firewall configurations were all functioning correctly.
+
+This setup closely mirrors real-world enterprise environments where multiple services run on different ports and can be enumerated by an attacker. With this foundation in place, the environment is now ready for deeper reconnaissance and targeted enumeration against each service.
+
 
 
 
