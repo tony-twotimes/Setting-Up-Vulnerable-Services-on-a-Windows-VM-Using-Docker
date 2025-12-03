@@ -8,7 +8,7 @@ The goal of this lab is to transform a standard Windows 10 virtual machine into 
 
 By the end of this setup, the Windows VM will expose:
 
-- DVWA (Damn Vulnerable Web App) on port 8080
+- DVWA (Damn Vulnerable Web App) on port 8888
 - MySQL 5.7 with weak credentials on port 3306
 - Juice Shop (forthcoming) on port 3000
 
