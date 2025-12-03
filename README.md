@@ -92,7 +92,17 @@ DVWA is a deliberately insecure PHP/MySQL web application. It is perfect for pra
 
 This runs MySQL on port 3306 and then verifies it is running. MySQL is commonly found in real environments and provides an excellent opportunity to practice database enumeration, user/privilege discovery, service recognition from port scanning, and weak credential testing.
 
-### Deploy 
+### 3.3 Pulling the DVWA Docker Image
+
+In powershell run: 
+docker pull vulnerables/web-dvwa
+
+This retrieves the official DVWA image from Docker Hub.
+DVWA is pre-configured, pre-built, and intentionally insecure — meaning no manual setup, web stack installation, or database configuration is required.
+
+### <img width="612" height="27" alt="image" src="https://github.com/user-attachments/assets/8a133c65-000e-459c-a2d2-c5bd948de7d8" />
+
+
 
 
 
