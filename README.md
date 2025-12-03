@@ -2,11 +2,11 @@
 
 ## Objective
 
-The goal of this lab is to transform a standard Windows 10 virtual machine into a multi-service vulnerable host by installing Docker and running several intentionally insecure applications inside containers. These services will later be discovered and enumerated using Nmap and other tools from a separate Kali Linux machine.
+The primary goal of this exercise is straightforward: we are transforming a standard Windows 10 virtual machine (VM) into an intentionally vulnerable, multi-service testing environment. We will accomplish this by installing Docker and deploying several known-insecure applications within containers. This prepared host will then be the target for discovery and enumeration using tools like Nmap from our separate Kali Linux machine.
 
 ### Skills Learned
 
-By the end of this setup, the Windows VM will expose:
+Once the setup is complete, the Windows VM will expose the following services for practice:
 
 - DVWA (Damn Vulnerable Web App) on port 8888
 - MySQL 5.7 with weak credentials on port 3306
